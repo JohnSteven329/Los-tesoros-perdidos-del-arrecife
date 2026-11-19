@@ -1,0 +1,26 @@
+{
+  "title": "Los Tesoros Perdidos del Arrecife",
+  "welcome": "¡Bienvenido a Los Tesoros Perdidos del Arrecife! Explora el océano y encuentra los cinco tesoros escondidos.",
+  "victory": "¡Felicidades! Has encontrado todos los tesoros perdidos del arrecife.",
+  "treasures": [
+    {"id":"compass", "name":"Brújula antigua"},
+    {"id":"key", "name":"Llave dorada"},
+    {"id":"chest", "name":"Cofre del tesoro"},
+    {"id":"pearl", "name":"Perla brillante"},
+    {"id":"coin", "name":"Moneda dorada"}
+  ],
+  "camera": {
+    "target":[0,2,0], "distance":18, "yaw":0, "pitch":0.19, "fov":49,
+    "near":0.12, "far":130, "distanceRange":[5,25], "pitchRange":[0.12,1.08],
+    "targetXRange":[-8,8], "targetZRange":[-9,7], "panSpeed":4.2, "rotateSpeed":0.005, "zoomFactor":0.09
+  },
+  "animation": {
+    "fishSpeed":0.39, "fishX":2.3, "fishZ":0.85, "fishY":0.15,
+    "bubbleSpeed":0.62, "bubbleHeight":7, "bubbleGrowth":0.45,
+    "plantSpeed":1.2, "plantAngle":0.085, "discoverySeconds":0.85
+  },
+  "lights": [
+    {"name":"Luz solar", "ambient":"#c1edff", "ambientIntensity":0.92, "sun":"#fff0c7", "sunIntensity":2.3, "sunPosition":[-9,16,6], "point":"#ffbe73", "pointPosition":[5,2,-2], "pointIntensity":32, "water":"#155a76", "surface":"#8ee2dc", "fogNear":14, "fogFar":57},
+    {"name":"Luz lunar", "ambient":"#9eb4f4", "ambientIntensity":0.73, "sun":"#9fceff", "sunIntensity":1.32, "sunPosition":[8,13,-4], "point":"#ffac75", "pointPosition":[5,2,-2], "pointIntensity":46, "water":"#19385b", "surface":"#657bb4", "fogNear":12, "fogFar":47}
+  ]
+}

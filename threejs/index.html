@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a171c">
+    <title>Los tesoros perdidos del arrecife · Mar Abierto</title>
+    <link rel="icon" href="./marca.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrap nav-inner">
+        <a class="brand" href="#expedicion" aria-label="Mar Abierto, volver a la expedición"><img src="./marca.svg" width="38" height="38" alt=""><span>Mar Abierto</span></a>
+        <nav aria-label="Principal">
+          <a class="nav-link active" href="#expedicion">Expedición</a>
+          <button class="nav-link" data-action="guide">Guía de campo</button>
+        </nav>
+        <span class="platform"><span class="status-dot"></span> SIMULADOR 3D</span>
+      </div>
+    </header>
+    <main class="wrap" id="expedicion">
+      <section class="intro" aria-labelledby="titulo">
+        <div>
+          <div class="eyebrow"><i></i> EXPLORACIÓN SUBMARINA</div>
+          <h1 id="titulo">Los tesoros perdidos <em>del arrecife</em></h1>
+          <p>Explora el arrecife y encuentra los cinco objetos ocultos entre los corales.</p>
+        </div>
+        <button class="secondary reset-btn" data-action="reset"><i data-icon="reset"></i> Reiniciar</button>
+      </section>
+
+      <div class="dashboard">
+        <section class="viewer panel" aria-label="Explorador del arrecife">
+          <div class="viewport" id="viewport">
+            <canvas id="reef" tabindex="0" aria-label="Escena 3D. Arrastra para girar, usa WASD para desplazarte y haz clic en los tesoros."></canvas>
+            <div class="live"><span class="status-dot"></span><span id="live-label">EN DIRECTO</span></div>
+            <button class="glass expand" data-action="expand" title="Ampliar visor" aria-label="Ampliar visor"><i data-icon="expand"></i></button>
+            <div class="viewer-caption"><div class="location"><i data-icon="pin"></i> ARRECIFE</div><span>Vista de exploración</span></div>
+            <div class="scene-actions">
+              <button class="glass" data-action="home" title="Centrar cámara" aria-label="Centrar cámara"><i data-icon="focus"></i></button>
+              <button class="glass" data-action="light" title="Cambiar iluminación (L)" aria-label="Cambiar iluminación (L)" aria-pressed="false"><i data-icon="sun"></i></button>
+              <button class="glass" data-action="pause" title="Pausar animaciones (P)" aria-label="Pausar animaciones (P)" aria-pressed="false"><i data-icon="pause"></i></button>
+            </div>
+            <div class="notice" id="notice" role="status" hidden><span></span><button type="button" data-action="dismiss" aria-label="Cerrar mensaje"><i data-icon="close"></i></button></div>
+            <div class="render-error" id="render-error" role="alert" hidden></div>
+          </div>
+          <div class="instrument-bar"><span><i data-icon="activity"></i> <b id="fps">—</b> FPS</span><span class="average">Media <b id="avg">—</b> FPS</span><span class="light-label"><i data-icon="sun"></i> <span id="light-name">Luz solar</span></span></div>
+        </section>
+
+        <aside class="journal panel" aria-labelledby="cuaderno">
+          <div class="journal-head"><div class="eyebrow gold"><i data-icon="book"></i> REGISTRO DE HALLAZGOS</div><h2 id="cuaderno">Cuaderno de campo</h2></div>
+          <div class="progress-info"><span>Tesoros encontrados</span><span class="count"><b id="count">0</b> / 5</span></div>
+          <div class="segments" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <ul id="treasure-list"></ul>
+        </aside>
+      </div>
+
+      <section class="controls panel" aria-labelledby="control-title">
+        <div class="controls-title"><i data-icon="controls"></i><h2 id="control-title">Controles</h2></div>
+        <ul>
+          <li><i data-icon="drag"></i><span><b>Arrastrar</b><small>Girar cámara</small></span></li>
+          <li><i data-icon="wheel"></i><span><b>Rueda</b><small>Acercar y alejar</small></span></li>
+          <li><span class="keys">WASD</span><span><b>Desplazarse</b><small>Mover cámara</small></span></li>
+          <li><i data-icon="pointer"></i><span><b>Clic izquierdo</b><small>Recoger tesoro</small></span></li>
+        </ul>
+      </section>
+    </main>
+    <footer class="wrap"><span>Mar Abierto <i></i> Programación de Gráficos por Computadora</span><span>PUCE · Manabí</span></footer>
+    <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+    <noscript>Activa JavaScript para explorar el arrecife.</noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
